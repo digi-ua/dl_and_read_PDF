@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PDF_dl_and_read</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_download">Download</string>
+    <string name="btn_read">Read</string>
+
+</resources>
