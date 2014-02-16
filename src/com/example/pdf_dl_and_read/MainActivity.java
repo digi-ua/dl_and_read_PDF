@@ -19,13 +19,17 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	
+	Button btn_read;
+	Button btn_dl;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button btn_dl = (Button) findViewById(R.id.btn_dl);
-		Button btn_read = (Button) findViewById(R.id.btn_read);		
+		btn_dl = (Button) findViewById(R.id.btn_dl);
+		btn_read = (Button) findViewById(R.id.btn_read);		
 		btn_dl.setOnClickListener(new ButtonListener());
         btn_read.setOnClickListener(new ButtonListener());
 	}
@@ -40,7 +44,7 @@ public class MainActivity extends Activity {
 					break;
 					
 				case R.id.btn_read:	
-					openPdf(Environment.DIRECTORY_DOWNLOADS + "java.pdf");
+					openPdf("/sdcard/"+ Environment.DIRECTORY_DOWNLOADS + "/java.pdf");					
 					break;
 					
 				default:
